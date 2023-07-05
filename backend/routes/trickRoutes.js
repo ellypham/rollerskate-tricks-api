@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const { getTricks, setTricks, updateTricks, deleteTricks } = require('../controllers/trickController')
+const { getTricks, setTrick, updateTrick, deleteTrick } = require('../controllers/trickController')
 
-router.route('/').get(getTricks).post(setTricks)
+router.route('/').get(getTricks).post(setTrick)
 
-router.route('/:id').put(updateTricks).delete(deleteTricks)
+router.route('/:id').put(updateTrick).delete(deleteTrick)
 
 module.exports  = router

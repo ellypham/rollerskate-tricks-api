@@ -51,9 +51,9 @@ const updateTrick = asyncHandler(async (req, res) => {
 // @access Private
 
 const deleteTrick = asyncHandler(async (req, res) => {
-  const trick =  await Trick.findByIdAndDelete(req.params.id)
+  const trick = await Trick.findByIdAndDelete(req.params.id)
 
-  if(!trick)   {
+  if(!trick) {
     res.status(400)
     throw new Error('Trick not found')
   }
